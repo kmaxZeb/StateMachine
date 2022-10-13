@@ -1,21 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-        print("Enjoy Sucker");
     }
 
     // Update is called once per frame
     void Update()
     {
         Movement();
-     //   MovementRaw();
     }
 
     void Movement()
@@ -27,9 +24,9 @@ public class PlayerMovement : MonoBehaviour
         move.Normalize();
         move *= speed * Time.deltaTime;
 
-        transform.position += (Vector3) move;
+        transform.position += (Vector3)move;
     }
-
+/*
     void MovementRaw()
     {
         float xAxis = Input.GetAxisRaw("Horizontal");
@@ -75,4 +72,5 @@ public class PlayerMovement : MonoBehaviour
             transform.position = newPosition;
         }
     }
+*/
 }
